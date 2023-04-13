@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.AssessmentEditPaage">
+    <ContentPage.Content>
+        <StackLayout Padding="75,0,75,0" BackgroundColor="FloralWhite">
+            <StackLayout>
+                <Label Text="{Binding Title}"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Assessment Title:"/>
+                <Entry x:Name="txtAssessmentTitleEntry"/>
+
+                <Label Text="Assessment Type:"
+                       />
+                <Picker 
+                        x:Name="pickerAssessmentSelect">
+                    <Picker.Items>
+                        <x:String>Performance Assessment</x:String>
+                        <x:String>Objective Assessment</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Assessment Start Date:"/>
+                <DatePicker x:Name="pickerStartDate"/>
+
+                <Label Text="Assessment Due Date:"/>
+                <DatePicker x:Name="pickerDueDate"/>
+                
+
+                <Label Text="Would you like to get notified?"/>
+                <Picker 
+                        x:Name="pickerNotificationSelect">
+                    <Picker.Items>
+                        <x:String>No</x:String>
+                        <x:String>Yes</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Button Text="Update Assessment"
+                        x:Name="btnUpdatetAssessmentType"
+                        Clicked="btnUpdateAssessmentType_Clicked"
+                        BackgroundColor="LightBlue"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+                />
+                
+                
+
+                <Button Text="Delete Assessment"
+                        x:Name="btnDeleteAssessment"
+                        Clicked="btnDeleteAssessment_Clicked"
+                        BackgroundColor="LightSalmon"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+              />
+
+
+                <Button Text="Cancel"
+                        x:Name="btnCancelAssesment"
+                        Clicked="btnCancelAssessment_Clicked"
+                        BackgroundColor="LightGray"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+               />
+
+
+
+
+
+
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

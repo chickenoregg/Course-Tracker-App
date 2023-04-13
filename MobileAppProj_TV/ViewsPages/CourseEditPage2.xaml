@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.CourseEditPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="View Assessments" 
+                     x:Name="btnAssessmentsEntry"
+                     Clicked="btnAssessmentsEntry_Clicked"
+                     />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <ScrollView>
+
+            <StackLayout Padding="75,0,75,0" BackgroundColor="FloralWhite">
+                <StackLayout>
+                    <Label Text="{Binding Title}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                            <Label Text="Course Name:" />
+                            <Entry x:Name="txtCourseTitleEntry" />
+
+
+                            <Label Text="Course Status:"/>
+                            <Picker Title="Course Status" x:Name="courseStatusEntry">
+                                <Picker.Items>
+                                    <x:String>In Progress</x:String>
+                                    <x:String>Completed</x:String>
+                                    <x:String>Dropped</x:String>
+                                    <x:String>Plan To Take</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+
+                            <Label Text="Start Date:"/>
+                            <DatePicker x:Name="startCourseDateEntry"/>
+                    
+
+                            <Label Text="End Date:"/>
+                            <DatePicker x:Name="endCourseDateEntry" />
+
+
+                            <Label Text="Instructor Name:"/>
+                            <Entry x:Name="txtInstructorNameEntry" />
+
+
+                            <Label Text="Instructor Phone:"/>
+                            <Entry x:Name="txtInstructorPhoneEntry"/>
+
+
+                            <Label Text="Instructor Email:"/>
+                            <Entry x:Name="txtInstructorEmailEntry"/>
+
+
+                            <Label Text="Notes:"/>
+                            <Entry x:Name="txtNotesEntry" />
+
+                            <Label Text="share notes"/>
+                            <Button Text="share" x:Name="btnShareNotes" Clicked="btnShareNotes_Clicked"/>
+
+
+                            <Label Text="Get Notified:"/>
+                            <Picker Title="Notifications:" x:Name="notifications">
+                                <Picker.Items>
+                            <x:String>No</x:String>
+                            <x:String>Yes</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+
+                    <Button Text="Cancel" 
+                            x:Name="btnDiscardEntry"
+                            Clicked="btnDiscardEntry_Clicked"
+                            BackgroundColor="LightGray"
+                HeightRequest="50"/>
+
+
+                    <Button Text="Save" 
+                            x:Name="btnSaveEntry"
+                            Clicked="btnSaveEntry_Clicked"
+                            BackgroundColor="LightBlue"
+                HeightRequest="50"/>
+
+
+
+                    <!--<Button Text="Assessments"
+                            x:Name="btnAssessmentsEntry"
+                            Clicked="btnAssessmentsEntry_Clicked"/>-->
+
+
+
+                    <Button Text="Delete Course" 
+                            x:Name="btnDeleteEntry"
+                            Clicked="btnDeleteEntry_Clicked"
+                            BackgroundColor="LightSalmon"
+                HeightRequest="50"/>
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

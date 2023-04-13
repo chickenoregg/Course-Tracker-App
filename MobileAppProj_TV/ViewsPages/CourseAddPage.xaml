@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.CourseAddPage">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Padding="75,0,75,0" BackgroundColor="FloralWhite">
+                <Label Text="{Binding Title}" />
+                <Label Text="Add A Course"
+                />
+                <Entry Placeholder="Course Name" 
+               x:Name="txtCourseTitleEntry"/>
+                <Picker Title="Course Status" x:Name="courseStatusEntry">
+                    <Picker.Items>
+                        <x:String>In Progress</x:String>
+                        <x:String>Completed</x:String>
+                        <x:String>Dropped</x:String>
+                        <x:String>To Take</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Start Date" Margin="20"/>
+                <DatePicker x:Name="startCourseDateEntry" Format="D"></DatePicker>
+                
+                <Label Text="End Date" Margin="20" />
+                <DatePicker x:Name="endCourseDateEntry" Format="D"></DatePicker>
+                
+                <Entry Placeholder="Course Instructor" 
+               x:Name="txtInstructorNameEntry"
+                       />
+
+                <Entry Placeholder="Instructor Email" 
+               x:Name="txtInstructorEmailEntry"/>
+
+                <Entry Placeholder="Instructor Phone"
+               x:Name="txtInstructorPhoneEntry"/>
+                
+                <Entry Placeholder="Notes" 
+               x:Name="txtNotesEntry"
+                       Margin="20"/>
+
+                <Picker Title="Notifications" x:Name="notifications">
+                    <Picker.Items>
+                        <x:String>No</x:String>
+                        <x:String>Yes</x:String>
+                    </Picker.Items>
+                </Picker>
+
+
+                <Button Text="Save Course"
+                        x:Name="btnSaveEntry"
+                        Clicked="btnSaveEntry_Clicked"
+                        BackgroundColor="LightBlue"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"/>
+
+                <Button Text="Cancel"
+                        x:Name="btnCancelEntry"
+                        Clicked="btnCancelEntry_Clicked"
+                        BackgroundColor="LightSalmon"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

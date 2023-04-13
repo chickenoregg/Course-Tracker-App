@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.TermHomePage">
+    <NavigationPage.TitleView>
+        <Image Source="https://www.kentreporter.com/wp-content/uploads/2016/12/web1_wgu-T.jpg"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               HeightRequest="50"
+               />
+    </NavigationPage.TitleView>
+
+
+
+
+    <ContentPage.Content>
+
+
+        <StackLayout Padding="50,0,50,50" BackgroundColor="FloralWhite">
+
+            <StackLayout>
+                <Label x:Name="MyName" FontSize="Large" FontAttributes="Bold" TextColor="SkyBlue"/>
+            </StackLayout>
+            <Label Text="Your Terms"
+               FontSize="20"
+               Margin="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="30*" />
+                </Grid.ColumnDefinitions>
+                <Label  Grid.Column="0" Grid.Row="0" Text="Term" FontAttributes="Bold"/>
+                <Label  Grid.Column="1" Grid.Row="0" Text="Start Date" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="End Date" FontAttributes="Bold"/>
+                
+            </Grid>
+
+            <ListView x:Name="termsList" ItemSelected="termsList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding TermTitle}" TextColor="SlateGray" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="{Binding TermStart,StringFormat='{}{0:MM/dd/yyyy}'}" TextColor="SlateGray" FontAttributes="Bold"/>
+                                <Label Grid.Column="2" Text="{Binding TermEnd,StringFormat='{}{0:MM/dd/yyyy}'}" TextColor="LightSalmon" FontAttributes="Bold"/>
+                            </Grid>
+                            
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+                
+            </ListView>
+            <Button Text="Add New Term"
+                    x:Name ="btnAddNewTerm"
+                    Clicked="btnAddNewTerm_Clicked"
+                    BackgroundColor="LightBlue"
+                    HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"/>
+
+
+            <!--<Button Text="Load Dummy Data"
+                    x:Name="btnLoadDummy"
+                    Clicked="btnLoadDummy_Clicked"
+                    BackgroundColor="Gray"
+                    HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"/>-->
+
+            <Button Text="Log Out"
+                    x:Name ="btnExit"
+                    Clicked="btnExit_Clicked"
+                    BackgroundColor="LightGray"
+                    HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

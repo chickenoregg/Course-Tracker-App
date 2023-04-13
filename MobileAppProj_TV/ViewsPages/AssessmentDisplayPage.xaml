@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.AssessmentDisplayPage">
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="50,0,50,50" BackgroundColor="FloralWhite">
+            <StackLayout>
+                <Label Text ="{Binding Title}"/>
+
+                <Label Text="Course Start:" x:Name="CourseStart" HorizontalOptions="Center" TextColor="SkyBlue" FontAttributes="Bold"/>
+                <Label Text="Course End:" x:Name="CourseEnd" HorizontalOptions="Center" TextColor="LightCoral" FontAttributes="Bold"/>
+
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="30*" />
+                    </Grid.ColumnDefinitions>
+                    <Label  Grid.Column="0" Grid.Row="0" Text="Assessment" FontAttributes="Bold" TextColor="SkyBlue"/>
+                    <Label  Grid.Column="1" Grid.Row="0" Text="Type" FontAttributes="Bold" TextColor="SkyBlue"/>
+                    <Label  Grid.Column="2" Grid.Row="0" Text="Assessment Due Date" FontAttributes="Bold" TextColor="SkyBlue"/>
+
+
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                
+                <ListView x:Name="AssessmentsList" ItemSelected="AssessmentsList_ItemSelected" RowHeight="100" Margin="10">
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding AssessmentTitle}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+                                    <Label Grid.Column="1" Text="{Binding AssessmentType}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+                                    <Label Grid.Column="2" Text="{Binding AssessmentEnd}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+
+                                </Grid>
+                             
+                                    
+
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+                
+
+
+                <!--<Button Text="View Courses"
+                        x:Name="btnCoursePage"
+                        Clicked="btnCoursePage_Clicked"
+                        BackgroundColor="CadetBlue"
+                HeightRequest="50"/>-->
+
+
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Add New Assessment" 
+                x:Name="btnNewAssessmentEntry"
+                Clicked="btnNewAssessmentEntry_Clicked"
+                        BackgroundColor="LightBlue"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+                        
+                
+                        
+              />
+
+                <Button Text="View Courses"
+                        x:Name="btnViewCourses"
+                        Clicked="btnViewCourses_Clicked"
+                        BackgroundColor="CadetBlue"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

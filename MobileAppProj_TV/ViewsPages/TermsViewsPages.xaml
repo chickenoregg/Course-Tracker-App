@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.TermsViewsPages"
+             Title="Term">
+    <ContentPage.Content>
+        <StackLayout Padding="50,5,50,50" BackgroundColor="FloralWhite">
+            <StackLayout>
+                <Label Text="{Binding Title}"
+                 />
+            </StackLayout>
+            <StackLayout >
+                <Label Text="Start and End Date:" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+                <Label x:Name="termStart" HorizontalOptions="Center" TextColor="SkyBlue" FontAttributes="Bold"/>
+                <Label x:Name="termEnd" HorizontalOptions="Center" TextColor="LightCoral" FontAttributes="Bold"/>
+                <Label Text="Click On Any Course to View More Details" HorizontalOptions="Center"/>
+
+                <ListView x:Name="coursesList" RowHeight="40" ItemSelected="coursesList_ItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout >
+
+                                    <!--<Label Text="Course:" FontSize="15" FontAttributes="Bold"/>-->
+                                    <Label Text="{Binding CourseTitle}" TextColor="SlateGray" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+                
+                <Button Text="Add Course" 
+                x:Name="btnNewCourseEntry"
+                Clicked="btnNewCourseEntry_Clicked_1"
+                BackgroundColor="LightBlue"
+                HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"/>
+                
+                
+                <Button Text="Update Term" 
+                x:Name="btnUpdateTermEntry"
+                Clicked="btnUpdateTermEntry_Clicked"
+                BackgroundColor="LightBlue"
+                HeightRequest="35"
+                WidthRequest="200"
+                HorizontalOptions="CenterAndExpand"/>
+
+
+                <Button Text="Delete Term" 
+                x:Name="btnDeleteTermEntry"
+                Clicked="btnDeleteTermEntry_Clicked"
+                BackgroundColor="LightSalmon"
+                HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <!--<Button Text="HomePage"
+                        x:Name="btnHomePage"
+                        Clicked="btnHomePage_Clicked"
+                        BackgroundColor="CadetBlue"
+                        HeightRequest="35"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"/>-->
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ViewsPages\AssessmentAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\AssessmentDisplayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\AssessmentEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\CourseAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\CourseDisplayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\CourseEditPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\TermAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\TermDisplayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\TermHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewsPages\TermsViewsPages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ServiceDB\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ViewsPages\AssessmentEditPage.xaml.cs">
+      <DependentUpon>AssessmentEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ViewsPages\CourseEditPage2.xaml.cs">
+      <DependentUpon>CourseEditPage2.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ViewsPages\CourseAddPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ViewsPages\CourseEditPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ViewsPages\TermAddPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ViewsPages\TermEditPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ViewsPages\TermHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.MainPage">
+
+    <StackLayout Padding="50" BackgroundColor="FloralWhite">
+
+        <Image Source="https://www.kentreporter.com/wp-content/uploads/2016/12/web1_wgu-T.jpg" Margin="50"/>
+
+        <Label Text="Welcome to Term App" FontSize="Large" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+            />
+
+        <Entry Placeholder="Enter your name" Margin="20"
+               x:Name="txtName"
+               />
+
+        <Button Text="Login"
+                x:Name="btnLogIn"
+                Clicked="btnLogIn_Clicked"
+                BackgroundColor="LightBlue"
+                HeightRequest="50"/>
+
+    </StackLayout>
+
+</ContentPage>

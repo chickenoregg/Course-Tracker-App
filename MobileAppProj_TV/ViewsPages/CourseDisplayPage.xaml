@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.CourseDisplayPage">
+    
+    
+    
+    <ContentPage.Content>
+
+
+        <StackLayout Padding="75,0,75,0" BackgroundColor="FloralWhite">
+            <StackLayout>
+                <Label Text="Course List" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+
+                <Label 
+                    Text="{Binding Title}"
+                 />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="30*" />
+                    </Grid.ColumnDefinitions>
+                    <Label  Grid.Column="0" Grid.Row="0" Text="Course" FontAttributes="Bold" TextColor="SkyBlue"/>
+                    <Label  Grid.Column="1" Grid.Row="0" Text="Status" FontAttributes="Bold" TextColor="SkyBlue"/>
+                    <Label Grid.Column="2" Grid.Row="0" Text="Instructor" FontAttributes="Bold" TextColor="SkyBlue"/>
+
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                <ListView x:Name="CourseListView" ItemSelected="courseList_ItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding CourseTitle}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+                                    <Label Grid.Column="1" Text="{Binding CourseStatus}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+                                    <Label Grid.Column="2" Text="{Binding InstructorName}" FontAttributes="Bold" TextColor="SlateGray" FontSize="15"/>
+
+                                </Grid>
+                           
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+                <Button Text="Add Course" 
+                x:Name="btnNewCourseEntry"
+                Clicked="btnNewCourseEntry_Clicked"
+                BackgroundColor="LightBlue"
+                HeightRequest="35"
+                WidthRequest="200"
+                HorizontalOptions="CenterAndExpand"/>
+
+                <Button Text="Back To Term Details"
+                x:Name="btnHomePage"
+                Clicked="btnHomePage_Clicked"
+                BackgroundColor="CadetBlue"
+                HeightRequest="35"
+                WidthRequest="200"
+                HorizontalOptions="CenterAndExpand"/>
+
+
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

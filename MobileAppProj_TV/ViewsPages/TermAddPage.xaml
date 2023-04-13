@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.TermAddPage">
+
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="50" BackgroundColor="FloralWhite">
+            <Label Text="Term Title:"/>
+            <Entry x:Name="txtNewTermEntry" Margin="20"
+                   />
+            <Label Text="Term Start Date"/>
+            <DatePicker x:Name="txtNewTermStartDate" Format="D"/>
+
+            <Label Text="Term End Date"/>
+            <DatePicker x:Name="txtNewTermEndDate" Format="D"/>
+
+            <Button Text="Save Term"
+                    x:Name="btnSaveTermEntry"
+                    Clicked="btnSaveTermEntry_Clicked"
+                    BackgroundColor="LightBlue"
+                    HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"
+           
+                    />
+
+            <Button Text="Cancel"
+                    x:Name="btnCancelTermEntry"
+                    Clicked="btnCancelTermEntry_Clicked"
+                    BackgroundColor="LightGray"
+                    HeightRequest="35"
+                    WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"
+           />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

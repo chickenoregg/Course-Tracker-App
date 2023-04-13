@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppProj_TV.ViewsPages.TermDisplayPage">
+    <ContentPage.Content>
+        <!--EDIT TERM PAGE-->
+        <StackLayout Padding="75,0,75,0" BackgroundColor="FloralWhite">
+            <Label Text="Edit Term Page"/>
+            <Entry x:Name="txtUpdateTermEntry"/>
+            <Label Text="Start Date"/>
+            <DatePicker x:Name="termUpdateStartEntry" Format="D"/>
+            <Label Text="End Date"/>
+            <DatePicker x:Name="termUpdateEndEntry" Format="D"/>
+
+            <!--update button--> 
+            <Button Text="Update"
+                    x:Name="btnUpdateTermEntry"
+                    Clicked="btnUpdateTermEntry_Clicked"
+                    BackgroundColor="LightBlue"
+                HeightRequest="50"
+                    />
+
+ 
+
+            <Button Text="Cancel"
+                    x:Name="btnCancelTermEditPage"
+                    Clicked="btnCancelTermEditPage_Clicked"
+                    BackgroundColor="CadetBlue"
+                HeightRequest="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
