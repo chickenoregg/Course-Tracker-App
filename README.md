@@ -1,52 +1,16 @@
-# Course-Tracker-App
+Course Tracker Mobile App
 
-A.   Create a log-in form that can determine the user’s location and translate log-in and error control messages (e.g., “The username and password did not match.”) into the user’s language and in one additional language.
+The Course Tracker Mobile App is a mobile application developed using C# and Xamarin, designed to assist students in managing their academic courses and progress. This app provides a comprehensive solution for tracking courses, assessments, objectives, and schedules, ensuring that users stay organized and on top of their academic journey.
 
- 
+Features
+Term Tracking: Users can create and manage multiple academic terms, such as semesters or quarters, within the app. They can define the start and end dates of each term, allowing them to keep track of their progress within specific time periods.
 
-B.  Provide the ability to add, update, and delete customer records in the database, including name, address, and phone number. 
+Course Management: The Course Tracker app allows users to add courses to their tracker, providing essential details such as the course title, instructor information. Users can easily view and update course details as needed.
 
- 
+Assessment Tracking: For each course, users can indicate the presence of scheduled assessments. The app enables users to set reminders for upcoming assessments, helping them stay prepared and meet their study goals.
 
-C.   Provide the ability to add, update, and delete appointments, capturing the type of appointment and a link to the specific customer record in the database.
+Objective and Performance Tracking: The Course Tracker app offers the flexibility to track both objective-based and performance-based assessments. Users can define objectives for each course, monitor their progress, and evaluate their performance against predefined criteria.
 
- 
+Schedule Management: Users can create a personalized schedule within the app, allowing them to allocate dedicated time slots for studying, attending lectures, or completing assignments. The schedule can be customized based on the user's preferences and specific course requirements.
 
-D.   Provide the ability to view the calendar by month and by week. 
-
- 
-
-E.   Provide the ability to automatically adjust appointment times based on user time zones and daylight-saving time.
-
- 
-
-F.   Write exception controls to prevent each of the following. You may use the same mechanism of exception control more than once, but you must incorporate at least two different mechanisms of exception control.
-
-•   scheduling an appointment outside business hours
-
-•   scheduling overlapping appointments
-
-•   entering nonexistent or invalid customer data
-
-•   entering an incorrect username and password
-
- 
-
-G.  Write two or more lambda expressions to make your program more efficient, justifying the use of each lambda expression with an in-line comment.
-
- 
-
-H.  Write code to provide reminders and alerts 15 minutes in advance of an appointment, based on the user’s log-in.
-
- 
-
-I.   Provide the ability to generate each of the following reports using the collection classes:
-
-•   number of appointment types by month
-
-•   the schedule for each consultant
-
-•   one additional report of your choice
-
-
-J.   Provide the ability to track user activity by recording timestamps for user log-ins in a .txt file. Each new record should be appended to the log file if the file already exists.
+Notifications and Reminders: The Course Tracker app provides the ability to enable notifications and reminders. Users can receive timely alerts for upcoming assessments, assignment deadlines, or other important course-related events. This feature ensures that users never miss any crucial dates or tasks.
